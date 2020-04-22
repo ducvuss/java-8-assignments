@@ -62,7 +62,7 @@ public class StringArraySorter {
 	}
 }
 
-class Utils {
+interface Utils {
 	static int comparesByMiddleChar(String string1, String string2) {
 		int string1ContainsE = string1.contains("e") ? 1 : 0;
 		int string2ContainsE = string2.contains("e") ? 1 : 0;
