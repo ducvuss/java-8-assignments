@@ -1,4 +1,4 @@
-package exercise1;
+package exercise.lambda;
 
 import java.util.Arrays;
 
@@ -38,6 +38,16 @@ public class StringArraySorter {
 		return strings;
 	}
 	
+	public String[] sortByMiddleChar(String[] strings) {
+		if(strings.length < 2) {
+			return strings;
+		}
+		
+		Arrays.sort(strings, (string1, string2) -> string1.charAt(0) - string2.charAt(0));
+//		Arrays.stream(strings).forEach(System.out::println);
+		return strings;
+		
+	}
 }
 
 

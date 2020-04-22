@@ -1,11 +1,11 @@
-package exercise1.test;
+package exercise.lambda.test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 
 import org.junit.jupiter.api.Test;
 
-import exercise1.StringArraySorter;
+import exercise.lambda.StringArraySorter;
 
 public class StringArraySorterTest {
 	@Test
@@ -43,6 +43,7 @@ public class StringArraySorterTest {
 			assertEquals(sorted[i], sortedArr[i]);
 		}
 	}
+	
 	
 	
 }
