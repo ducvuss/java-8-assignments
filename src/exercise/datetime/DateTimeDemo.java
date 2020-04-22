@@ -17,7 +17,8 @@ public class DateTimeDemo {
 		DateTimeDemo demo = new DateTimeDemo();
 		demo.storeBirthday();
 		demo.previousThursday();
-		demo.workWithZone();
+		demo.workWithZoneID();
+		demo.workWithZoneOffset();
 	}
 
 	public void storeBirthday() {
@@ -36,7 +37,7 @@ public class DateTimeDemo {
 		System.out.println("last " + date.getDayOfWeek() + " of today is " + date);
 	}
 
-	public void workWithZone() {
+	public void workWithZoneID() {
 
 		LocalDateTime date = LocalDateTime.now();
 
@@ -45,7 +46,23 @@ public class DateTimeDemo {
 			System.out.println(utc + " now is " + date.now(utc));
 		});
 
-		ZoneOffset zoneOffset = ZoneOffset.UTC;
+		ZoneId zone = ZoneId.of("Europe/Berlin");
+		System.out.println(zone + " now is " + date.now(zone));
+
+	}
+
+	public void workWithZoneOffset() {
+
+		LocalDateTime date = LocalDateTime.now();
+
+		ZoneId zone = ZoneId.of("Asia/Saigon");
+
+		System.out.println(zone + " now is " + date.now(zone));
+		
+
+		ZoneOffset zoneOffSet = zone.getRules().getOffset(date);
+		System.out.println("time offset is " + zoneOffSet);
+
 	}
 
 }
