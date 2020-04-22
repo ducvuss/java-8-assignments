@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 
 import exercise1.StringArraySorter;
 
-public class BasicLambdaExcerciseTest {
+public class StringArraySorterTest {
 	@Test
 	public void sortArrayTest() {
 		String[] strings = {"abcd", "a", "abc", "ab", "abcde", "a", "ab"};
