@@ -14,6 +14,15 @@ public class StringArraySorter {
 		Arrays.sort(strings, (string1, string2) -> string1.length() - string2.length());
 		return strings;
 	}
+
+	public String[] reverseSortArray(String[] strings) {
+		if(strings.length < 2) {
+			return strings;
+		}
+		
+		Arrays.sort(strings, (string1, string2) -> string2.length() - string1.length());
+		return strings;
+	}
 }
 
 

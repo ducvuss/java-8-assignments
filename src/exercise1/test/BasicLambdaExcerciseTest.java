@@ -2,7 +2,6 @@ package exercise1.test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import java.util.Arrays;
 
 import org.junit.jupiter.api.Test;
 
@@ -20,4 +19,18 @@ public class BasicLambdaExcerciseTest {
 			assertEquals(sorted[i], sortedArr[i]);
 		}
 	}
+	
+	@Test
+	public void reverseSortArrayTest() {
+		String[] strings = {"abcd", "a", "abc", "ab", "abcde", "a", "ab"};
+		String[] sorted = {"abcde", "abcd", "abc", "ab", "ab", "a", "a"};
+		
+		StringArraySorter sorter = new StringArraySorter();
+		String[] sortedArr = sorter.reverseSortArray(strings);
+		for(int i = 0; i < strings.length; i++) {
+			assertEquals(sorted[i], sortedArr[i]);
+		}
+	}
+	
+	
 }
