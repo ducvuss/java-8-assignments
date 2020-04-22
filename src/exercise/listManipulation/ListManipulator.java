@@ -16,7 +16,8 @@ public class ListManipulator {
 			}
 			return "o" + number;
 		}).reduce("", (substring, element) -> {
-			if (substring.isEmpty()) return element;
+			if (substring.isEmpty())
+				return element;
 			return substring + "," + element;
 		});
 	}
