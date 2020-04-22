@@ -42,11 +42,14 @@ public class StringArraySorter {
 		if(strings.length < 2) {
 			return strings;
 		}
-		
-		Arrays.sort(strings, (string1, string2) -> string1.charAt(0) - string2.charAt(0));
+		Arrays.sort(strings, (string1, string2) -> {
+			int string1ContainsE = string1.contains("e") ? 1 : 0;
+			int string2ContainsE = string2.contains("e") ? 1 : 0;
+			return string2ContainsE - string1ContainsE;
+		});
+
 //		Arrays.stream(strings).forEach(System.out::println);
 		return strings;
-		
 	}
 }
 

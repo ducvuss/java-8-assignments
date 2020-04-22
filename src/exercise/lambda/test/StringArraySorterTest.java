@@ -33,12 +33,24 @@ public class StringArraySorterTest {
 	}
 	
 	@Test
-	public void reverseByFirstCharTest() {
+	public void sortByFirstCharTest() {
 		String[] strings = {"abcd", "b", "bcd", "xy", "zabcde", "n", "omn"};
 		String[] sorted = {"abcd", "b", "bcd", "n", "omn", "xy", "zabcde"};
 		
 		StringArraySorter sorter = new StringArraySorter();
 		String[] sortedArr = sorter.sortByFirstChar(strings);
+		for(int i = 0; i < strings.length; i++) {
+			assertEquals(sorted[i], sortedArr[i]);
+		}
+	}
+	
+	@Test
+	public void sortByMiddleCharTest() {
+		String[] strings = {"abcd", "be", "bcd", "xye", "zabcde", "n", "omn"};
+		String[] sorted = {"be", "xye", "zabcde", "abcd", "bcd", "n", "omn"};
+		
+		StringArraySorter sorter = new StringArraySorter();
+		String[] sortedArr = sorter.sortByMiddleChar(strings);
 		for(int i = 0; i < strings.length; i++) {
 			assertEquals(sorted[i], sortedArr[i]);
 		}
