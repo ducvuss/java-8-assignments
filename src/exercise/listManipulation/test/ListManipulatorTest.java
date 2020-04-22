@@ -2,8 +2,10 @@ package exercise.listManipulation.test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+import java.time.ZoneId;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.IntStream;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -54,9 +56,10 @@ public class ListManipulatorTest {
 		
 
 		List<String> actual = manipulator.filterList(strings);
-		for (int i = 0; i < actual.size(); i++) {
+
+		IntStream.range(0, actual.size()).forEach(i -> {
 			assertEquals(expected[i], actual.get(i));
-		}
+		});
 	}
 	
 

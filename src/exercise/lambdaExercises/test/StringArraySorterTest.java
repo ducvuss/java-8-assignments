@@ -2,6 +2,8 @@ package exercise.lambdaExercises.test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+import java.util.stream.IntStream;
+
 import org.junit.jupiter.api.Test;
 
 import exercise.lambdaExercises.StringArraySorter;
@@ -14,9 +16,10 @@ public class StringArraySorterTest {
 
 		StringArraySorter sorter = new StringArraySorter();
 		String[] sortedArr = sorter.sortArray(strings);
-		for (int i = 0; i < strings.length; i++) {
+		
+		IntStream.range(0, strings.length).forEach(i -> {
 			assertEquals(sorted[i], sortedArr[i]);
-		}
+		});
 	}
 
 	@Test
