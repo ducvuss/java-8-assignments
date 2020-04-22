@@ -8,17 +8,17 @@ import java.util.List;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import exercise.listManipulation.IntegerListManipulator;
+import exercise.listManipulation.ListManipulator;
 
-public class IntegerListManipulatorTest {
+public class ListManipulatorTest {
 	
 
 	List<Integer> integers;
-	IntegerListManipulator manipulator;
+	ListManipulator manipulator;
 	@BeforeEach
 	public void beforeTest( ) {
 		integers = new ArrayList<>();
-		manipulator = new IntegerListManipulator();
+		manipulator = new ListManipulator();
 	}
 
 	@Test

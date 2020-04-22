@@ -1,10 +1,10 @@
-package exercise.lambda.test;
+package exercise.lambdaExercises.test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.Test;
 
-import exercise.lambda.StringArraySorter;
+import exercise.lambdaExercises.StringArraySorter;
 
 public class StringArraySorterTest {
 	@Test

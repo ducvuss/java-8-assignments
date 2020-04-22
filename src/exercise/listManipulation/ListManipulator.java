@@ -2,7 +2,7 @@ package exercise.listManipulation;
 
 import java.util.List;
 
-public class IntegerListManipulator {
+public class ListManipulator {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
