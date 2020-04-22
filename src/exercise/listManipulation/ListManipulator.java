@@ -1,6 +1,7 @@
 package exercise.listManipulation;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class ListManipulator {
 
@@ -20,6 +21,12 @@ public class ListManipulator {
 				return element;
 			return substring + "," + element;
 		});
+	}
+	
+	public List<String> filterList(List<String> strings) {
+		return strings.stream().filter(string -> {
+			return string.startsWith("a") && string.length() == 3;
+		}).collect(Collectors.toList());
 	}
 
 }
