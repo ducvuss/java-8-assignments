@@ -37,7 +37,7 @@ public class StringArraySorter {
 //		Arrays.stream(strings).forEach(System.out::println);
 		return strings;
 	}
-	
+
 	public String[] sortByMiddleChar(String[] strings) {
 		if(strings.length < 2) {
 			return strings;
@@ -51,7 +51,23 @@ public class StringArraySorter {
 //		Arrays.stream(strings).forEach(System.out::println);
 		return strings;
 	}
+	
+	public String[] sortByMiddleCharWithStaticHelper(String[] strings) {
+		if(strings.length < 2) {
+			return strings;
+		}
+		Arrays.sort(strings, Utils::comparesByMiddleChar);
+
+		return strings;
+	}
 }
 
+class Utils {
+	static int comparesByMiddleChar(String string1, String string2) {
+		int string1ContainsE = string1.contains("e") ? 1 : 0;
+		int string2ContainsE = string2.contains("e") ? 1 : 0;
+		return string2ContainsE - string1ContainsE;
+	}
+}
 
 
